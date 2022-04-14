@@ -1,0 +1,53 @@
+/*
+Theme Name: TA Mag
+
+Adding support for languages written in a Right To Left (RTL) direction is easy -
+it's just a matter of overwriting all the horizontal positioning attributes
+of your CSS stylesheet in a separate stylesheet file named rtl.css.
+
+https://codex.wordpress.org/Right-to-Left_Language_Support
+
+*/
+
+/*
+body {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+*/
+.site-header .ta-social-icon{
+	text-align: right;
+}
+.ta-header-search-main{
+	text-align: left;
+}
+span.posted-on {
+    padding-right: 10px;
+}
+span.byline.ta-author-image img {
+    margin-right: 0;
+}
+span.byline.ta-author-image {
+    margin-right: 0;
+}
+.ta-header-search input.search-submit{
+	left: 26%;
+	right: inherit;
+}
+.ta-header-search input.search-field {
+    padding-right: 15px;
+}
+@media(max-width:1024px) {
+	.ta-header-search input.search-submit {
+	    left: 27%;
+	}
+}
+@media(max-width:768px) {
+	.site-header .ta-social-icon {
+	    text-align: center;
+	}
+	.ta-header-search input.search-submit{
+		left: 8%;
+	}
+}
+
